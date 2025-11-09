@@ -2,15 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "api/check-member.js",
+      "src": "api/*.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
-      "src": "/api/check-member",
-      "methods": ["POST", "OPTIONS"],
-      "dest": "/api/check-member.js"
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
     }
   ]
 }
