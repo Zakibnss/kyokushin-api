@@ -9,7 +9,7 @@
   "routes": [
     {
       "src": "/api/check-member",
-      "methods": ["POST"],
+      "methods": ["POST", "OPTIONS"],
       "dest": "/api/check-member.js"
     }
   ]
